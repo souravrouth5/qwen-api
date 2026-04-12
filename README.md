@@ -1,7 +1,7 @@
 # 🤖 Qwen API
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/<your-username>/qwen-api-public/main/assets/Qwen.png" alt="Qwen API" width="180" />
+  <img src="./public/assets/Qwen.png" alt="Qwen API" width="180" />
 </p>
 
 > **A powerful OpenAI-compatible API powered by Qwen — with web search, deep research, image generation, file uploads, agentic tool calling, and more.**
