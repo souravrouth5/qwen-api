@@ -1,0 +1,70 @@
+name: Update Models in README
+
+on:
+  schedule:
+    - cron: "0 0 */5 * *"
+  workflow_dispatch:
+
+jobs:
+  update-models:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh token
+        id: refresh
+        run: |
+          RESPONSE=$(curl -s -H "Authorization: Bearer ${{ secrets.QWEN_TOKEN }}" \
+            "https://qwen-web-gateway.onrender.com/v1/refresh")
+          echo "FRESH_TOKEN=$(echo "$RESPONSE" | node -e "const d=require('fs').readFileSync('/dev/stdin','utf8'); console.log(JSON.parse(d).token)")" >> $GITHUB_OUTPUT
+
+      - name: Fetch models + update README
+        run: |
+          curl -s -H "Authorization: Bearer ${{ steps.refresh.outputs.FRESH_TOKEN }}" \
+            "https://qwen-web-gateway.onrender.com/v1/models" -o models.json
+
+          node -e "
+          const fs = require('fs');
+          const models = JSON.parse(fs.readFileSync('models.json', 'utf8'));
+          const list = models.data || [];
+
+          const bool = v => v ? '\u2705' : '\u274c';
+          const ctx = v => {
+            if (!v) return '-';
+            if (v >= 1000000) return (v / 1000000) + 'M';
+            if (v >= 1000) return (v / 1000) + 'K';
+            return String(v);
+          };
+
+          const rows = list.map(m => {
+            const cap = m.info?.meta?.capabilities || {};
+            const maxCtx = m.info?.meta?.max_context_length;
+            return \`| \${m.name} | \\\`\${m.id}\\\` | \${bool(cap.vision)} | \${bool(cap.thinking)} | \${bool(cap.search)} | \${bool(cap.audio)} | \${bool(cap.document)} | \${bool(cap.video)} | \${ctx(maxCtx)} |\`;
+          }).join('\n');
+
+          const table =
+            '| Model | ID | \ud83d\udc41\ufe0f Vision | \ud83d\udca1 Thinking | \ud83c\udf10 Search | \ud83c\udfb5 Audio | \ud83d\udcc4 Document | \ud83c\udfac Video | Context |\n' +
+            '|---|---|---|---|---|---|---|---|---|\n' +
+            rows;
+
+          const readme = fs.readFileSync('README.md', 'utf8');
+          const updated = readme.replace(
+            /(\| Model \| ID \|.*\n\|---\|.*\n)([\s\S]*?)(\n> Model list)/,
+            table + '\n\$3'
+          );
+          fs.writeFileSync('README.md', updated);
+          console.log('Updated', list.length, 'models');
+          "
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet README.md || (
+            git add README.md &&
+            git commit -m "chore: update models table [skip ci]" &&
+            git push
+          )
