@@ -34,8 +34,10 @@
 | Model | ID | 👁️ Vision | 💡 Thinking | 🌐 Search | 🎵 Audio | 📄 Document | 🎬 Video | Context |
 |---|---|---|---|---|---|---|---|---|
 | Qwen3.6-Plus | `qwen3.6-plus` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
+| Qwen3.6-Max-Preview | `qwen3.6-max-preview` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 262.144K |
 | Qwen3.5-Plus | `qwen3.5-plus` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.5-Omni-Plus | `qwen3.5-omni-plus` | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | 262.144K |
+| Qwen3.6-35B-A3B | `qwen3.6-35b-a3b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
 | Qwen3.5-Flash | `qwen3.5-flash` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.5-Max-Preview | `qwen3.5-max-2026-03-08` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 262.144K |
 | Qwen3.6-Plus-Preview | `qwen3.6-plus-preview` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 1M |
