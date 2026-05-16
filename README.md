@@ -36,23 +36,6 @@
 | Qwen3.6-Plus | `qwen3.6-plus` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.6-Max-Preview | `qwen3.6-max-preview` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 262.144K |
 | Qwen3.6-27B | `qwen3.6-27b` | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | 262.144K |
-| Qwen3.5-Plus | `qwen3.5-plus` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
-| Qwen3.5-Omni-Plus | `qwen3.5-omni-plus` | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3.6-35B-A3B | `qwen3.6-35b-a3b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3.5-Flash | `qwen3.5-flash` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
-| Qwen3.5-Max-Preview | `qwen3.5-max-2026-03-08` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 262.144K |
-| Qwen3.6-Plus-Preview | `qwen3.6-plus-preview` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 1M |
-| Qwen3.5-397B-A17B | `qwen3.5-397b-a17b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3.5-122B-A10B | `qwen3.5-122b-a10b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3.5-Omni-Flash | `qwen3.5-omni-flash` | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3.5-27B | `qwen3.5-27b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3.5-35B-A3B | `qwen3.5-35b-a3b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3-Max | `qwen3-max-2026-01-23` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 262.144K |
-| Qwen3-235B-A22B-2507 | `qwen-plus-2025-07-28` | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | 131.072K |
-| Qwen3-Coder | `qwen3-coder-plus` | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | 1.048576M |
-| Qwen3-VL-235B-A22B | `qwen3-vl-plus` | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | 262.144K |
-| Qwen3-Omni-Flash | `qwen3-omni-flash-2025-12-01` | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | 65.536K |
-| Qwen2.5-Max | `qwen-max-latest` | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | 131.072K |
 
 > Model list is updated automatically every 5 days from the live API.
 
