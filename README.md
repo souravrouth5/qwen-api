@@ -33,8 +33,8 @@
 
 | Model | ID | 👁️ Vision | 💡 Thinking | 🌐 Search | 🎵 Audio | 📄 Document | 🎬 Video | Context |
 |---|---|---|---|---|---|---|---|---|
-| Qwen3.8-Max | `qwen3.8-max` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.7-Plus | `qwen3.7-plus` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
+| Qwen3.8-Max | `qwen3.8-max` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.7-Max | `qwen3.7-max` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | 1M |
 
 > Model list is updated automatically every 5 days from the live API.
