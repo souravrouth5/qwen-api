@@ -34,6 +34,7 @@
 | Model | ID | 👁️ Vision | 💡 Thinking | 🌐 Search | 🎵 Audio | 📄 Document | 🎬 Video | Context |
 |---|---|---|---|---|---|---|---|---|
 | Qwen3.7-Plus | `qwen3.7-plus` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
+| Qwen4-Max-Preview | `qwen4.0-max-preview` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.8-Max | `qwen3.8-max` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 1M |
 | Qwen3.8-Omni-Flash | `qwen3.8-omni-flash` | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | 1M |
 
